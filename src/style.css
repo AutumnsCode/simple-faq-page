@@ -1,0 +1,111 @@
+/* fonts */
+/* inter-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/inter-v20-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/src/fonts/inter-v20-latin-600.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+/* General Styles */
+*,*::before,*::after{
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Root */
+:root{
+  --clr-text: #030616;
+  --clr-main-background: #F8FAFC;
+  --clr-header-background: #fff;
+  --clr-seperator: #D2D5DA;
+  --clr-anchor: #4E80EE;
+  --font-family: 'Inter', sans-serif;
+  --fz-body: 16px;
+  --fz-header-1: 2.25rem;
+  --fz-header-2: 1.5rem;
+}
+
+body{
+  font-family: var(--font-family);
+  background-color: var(--clr-main-background);
+}
+
+header{
+  background-color: var(--clr-header-background);
+  padding-block: 4.5rem;
+  text-align: center;
+}
+
+main{
+  padding-block: 2rem;
+}
+section {
+  padding-block: 2.5rem;
+}
+.divider {
+  border-bottom: 1px solid var(--clr-seperator);
+}
+
+h1{
+  font-size: var(--fz-header-1);
+  margin-bottom: 1rem;
+}
+
+h2{
+  font-size: var(--fz-header-2);
+  margin-bottom: 2rem;
+}
+
+ul,ol {
+  margin: 0;
+  padding: 0;
+  padding-left: 1.25rem;
+  line-height: 1.4;
+}
+ul > *+ *, ol > *+ *{
+  margin-top: 0.5rem;
+}
+
+span{
+  font-weight: 600;
+}
+
+a {
+  color: var(--clr-anchor);
+  text-decoration: none;
+}
+
+.wrapper{
+  width: calc(100% - (2 * 1.5rem));
+  margin-inline: auto;
+}
+
+@media (min-width: 640px){
+  .wrapper{
+    --max-width: 671px;
+    max-width: var(--max-width);
+  }
+}
+
+.space-y>* + *{
+  margin-top: 1.5rem;
+}
+
